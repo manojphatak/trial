@@ -4,7 +4,7 @@ pipelines:
     locking: off
     materials:
       main_repo:
-        git: https://github.com/d-led/gocd-rpi-unicorn-hat-monitor.git
+        git: https://github.com/manojphatak/trial.git
         branch: master
     stages:
       - test:
@@ -15,12 +15,5 @@ pipelines:
                - exec:
                    command: python
                    arguments:
-                    - FakeHat.py
-               - exec:
-                   command: python
-                   arguments:
-                    - matrix.py
-               - exec:
-                   command: python
-                   arguments:
-                    - sink.py
+                    - sandbox.py
+               
